@@ -3,8 +3,7 @@ import * as bcrypt from 'bcrypt';
 export namespace BcryptUtil {
     export async function createHash(original: string) {
         const saltOrRounds = 10;
-        const password = 'random_password';
-        const hash = await bcrypt.hash(password, saltOrRounds);
+        const hash = await bcrypt.hash(original, saltOrRounds);
         return hash
     }
 

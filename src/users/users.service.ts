@@ -16,6 +16,7 @@ export class UsersService {
         username,
         password: hashed
     });
+    console.log('created: ', createdUser)
     return createdUser.save();
   }
 
